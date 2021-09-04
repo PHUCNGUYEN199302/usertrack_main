@@ -5,30 +5,24 @@ on:
 name: Test, Build and Release apk
 jobs:
   build:
-    # This job will run on ubuntu virtual machine
-    runs-on: ubuntu-latest
+    name: Build APK
+    runs-on: macos-latest
     steps:
-
-    # Setup Java environment in order to build the Android app.
-    - uses: actions/checkout@v1
-    - uses: actions/setup-java@v1
-      with:
-        java-version: '12.x'
-
-    # Setup the flutter environment.
-    - uses: subosito/flutter-action@v1
-      with:
-        channel: 'stable' # 'dev', 'alpha', default to: 'stable'
-        flutter-version: '1.17.5' # you can also specify exact version of flutter
-
-    # Get flutter dependencies.
-    - name: Install dependencies
-      run: flutter pub get    
-    - name: Build apk
-      run: flutter build apk --debug --split-per-abi
-
-    # Upload generated apk to the artifacts.
-    - uses: actions/upload-artifact@v1
-      with:
-        name: release-apk
-        path: build/app/outputs/apk/release/app-release.apk
+      - uses: actions/checkout@v1
+      - uses: actions/setup-java@v1
+        with:
+          java-version: '15'
+          distribution: 'adopt'
+      - uses: subosito/flutter-action@v1
+        with:
+          channel: 'stable'
+      - run: flutter pub get
+      - name: Build Android App
+        run: flutter build apk --split-per-abi
+      - name: Build iOS App
+        run: flutter build ios --release --no-codesign
+      - name: Create a Release APK
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build/app/outputs/apk/release/*.apk,build/ios/iphoneos/*.ipa"
+          token: ${{ secrets.PHUC_TOKEN_NEW }}
