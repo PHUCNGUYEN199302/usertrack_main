@@ -19,10 +19,16 @@ jobs:
       - run: flutter pub get
       - name: Build Android App
         run: flutter build apk --split-per-abi
-      - name: Build iOS App
-        run: flutter build ios --release --no-codesign
+      - run: |
+          flutter build ios --no-codesign
+          cd build/ios/iphoneos
+          mkdir Payload
+          cd Payload
+          ln -s ../Runner.app
+          cd ..
+          zip -r app.ipa Payload
       - name: Create a Release APK
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "build/app/outputs/apk/release/*.apk,build/ios/iphoneos/*.ipa"
+          artifacts: "build/app/outputs/apk/release/*.apk,build/ios/iphoneos/app.ipa"
           token: ${{ secrets.PHUC_TOKEN_NEW }}
