@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "336043723421",
+    "project_id": "phuc-app-mobile",
+    "storage_bucket": "phuc-app-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:336043723421:android:d62b0da963b5d8f2efa274",
+        "android_client_info": {
+          "package_name": "com.example.usertrack_main"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "336043723421-l8pkj75i0jf75leo9k64re132o305srm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1NRPN0ObQgUfOR6JjA9RBYrOlqLwqrsw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "336043723421-l8pkj75i0jf75leo9k64re132o305srm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
