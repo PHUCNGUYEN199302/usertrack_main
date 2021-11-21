@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>336043723421-ac5kfqh50kq03ug4s7v0sogi6a62sgdd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.336043723421-ac5kfqh50kq03ug4s7v0sogi6a62sgdd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAnYnquDFB5AoUR5TdWMfL0Z5Pia51us2g</string>
+	<key>GCM_SENDER_ID</key>
+	<string>336043723421</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.usertrackMain</string>
+	<key>PROJECT_ID</key>
+	<string>phuc-app-mobile</string>
+	<key>STORAGE_BUCKET</key>
+	<string>phuc-app-mobile.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:336043723421:ios:2f757b6317c3bb7fefa274</string>
+	<key>DATABASE_URL</key>
+	<string>https://phuc-app-mobile-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
