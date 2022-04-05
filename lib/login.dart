@@ -20,8 +20,7 @@ class _LoginState extends State<Login> {
   @override
   void initState() {
     userNameController.addListener(() {
-      bool emailValid = RegExp(
-              r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+      bool emailValid = RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]")
           .hasMatch(gmailController.text);
       if (emailValid) {
         isCanClickLogin = (userNameController.text.isNotEmpty &&
