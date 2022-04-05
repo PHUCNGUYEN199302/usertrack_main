@@ -42,7 +42,8 @@ class _HomeState extends State<Home> {
 
   Future changeAvatar() async{
     final image = await ImagePicker().pickImage(source: ImageSource.gallery);
-    final fileTem = File(image!.path);
+    String strFile = image!.path;
+    final fileTem = File(strFile);
     setState(() {
       this.image = fileTem;
     });
